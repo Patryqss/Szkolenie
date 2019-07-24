@@ -43,14 +43,29 @@ section {
     margin: 20px auto;
     text-align: center;
     border-radius: 10px;
+    position: relative;
+    animation: gora;
+    animation-duration: 1s;
 }
 
 .zdjecie {
     flex: 1;
+    position: relative;
+    animation: lewo;
+    animation-duration: 1s;
 }
 
 .szczegoly {
     flex: 3;
+    position: relative;
+    animation: prawo;
+    animation-duration: 1s;
+}
+
+.linki {
+    position: relative;
+    animation: dol;
+    animation-duration: 1s;
 }
 
 .linki ul {
@@ -122,4 +137,21 @@ ul.opis {
     .linki a {
         flex: 1 1 25%;
     }
+}
+
+@keyframes gora {
+    0% {top: -20em;}
+    100% {top: 0;}
+}
+@keyframes lewo {
+    0% {left: -20em;}
+    100% {left: 0;}
+}
+@keyframes prawo {
+    0% {right: -20em;}
+    100% {right: 0;}
+}
+@keyframes dol {
+    0% {bottom: -20em;}
+    100% {bottom: 0;}
 }
