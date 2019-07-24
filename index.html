@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Wizytówka Patryk Grzyb</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet" type="text/css" >
+        <meta name="description" content="Wizytówka Patryka Grzyba">
+	    <meta name="keywords" content="Wizytówka, Patryk Grzyb, Najlepszy programista, CodersCamp">
+	    <meta name="author" content="PG">
+        <meta http-equiv="X-Ua-Compatible" content="IE=edge">
+        
+        <script type="text/javascript">
+            function mojWiek()
+            {
+                var dzisiaj = new Date();
+                var sekunda = 7;
+                var minuta = 30;
+                var godzina = 15;
+                var dzien = 14;
+                var miesiac = 7;
+                var rok = 1997;
+
+                if (dzisiaj.getSeconds()<sekunda) {
+                    sekunda = 60+(dzisiaj.getSeconds()-sekunda);
+                } else {
+                    sekunda = dzisiaj.getSeconds()-sekunda;
+                }
+        
+                document.getElementById("zegar").innerHTML = " "+sekunda;
+        
+                setTimeout("mojWiek()",1000);
+            }
+        </script>
+    </head>
+    <body onload="mojWiek();">
+            
+        <header class="intro">
+            <h1>Patryk Grzyb</h1>
+        </header>
+
+        <div class="wizytowka">
+            <section class="zdjecie">
+                <img src=zdjecie.jpg>
+            </section>
+            <section class="szczegoly" >
+                <p class="opis"><span class="wstep">Wykształcenie:</span> Technik Teleinformatyk</p>
+                <p class="opis"><span class="wstep">Obecne zajecie:</span> Trzeci rok na Uniwersytecie Ekonomicznym na kierunku "Informatyka w biznesie"</p>
+                <p class="opis"><span class="wstep">Wiek:</span><span id="zegar"></span></p>
+                <p class="opis"><span class="wstep">Umiejętności:</span></p>
+                <ul class="opis">
+                    <li>Tworzenie sieci LAN i WAN</li>
+                    <li>Języki: C++, SQL, HTML, CSS, Java</li>
+                    <li>Obsługa central telefoniznych PABX</li>
+                    <li>Angielski na poziomie C1</li>
+                    <li>Niemiecki na poziomie A2</li>
+                    <li>I wiele innych</li>
+                </ul>
+                <p class="opis"><span class="wstep">Hobby:</span></p>
+                <ul class="opis">
+                    <li>Tworzenie gier komputerowych</li>
+                    <li>Programowanie</li>
+                    <li>Pisanie książek i scenariuszy filmowych</li>
+                    <li>Układanie puzzli</li>
+                </ul>
+            </section>
+        </div>
+        <section class="linki">
+            <p>Sprawdź moje prace lub znajdź mnie w mediach społecznościowych klikając na jeden z poniższych linków:</p>
+                <ul>
+                    <a href="#"><li class="link ksiazka"><img src="Książka.png"></li></a>
+                    <a href="https://forum.gmclan.org/index.php?/topic/34262-12-prac-herkulesa/" target="_blank"><li class="link gra"><img src="Gra.png"></li></a>
+                    <a href="https://www.youtube.com/watch?v=klV9VyHZJgw" target="_blank"><li class="link film"><img src="Kryształ.png"></li></a>
+                    <a href="https://www.facebook.com/patryk.grzyb.94" target="_blank"><li class="link facebook"><img src="Fb.png"></li></a>
+                    <a href="https://www.instagram.com/patryqss/" target="_blank"><li class="link instagram"><img src="Inst.png"></li></a>
+                    <a href="https://github.com/Patryqss" target="_blank"><li class="link github"><img src="Git.png"></li></a>
+                </ul>
+        </section>
+    </body>
+</html>
