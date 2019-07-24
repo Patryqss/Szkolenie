@@ -11,6 +11,7 @@ body {
     margin: 0;
     background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
     /* background-color: #191d21; */
+    background-image: url("tło.jpg");
     color: #efefef;
 }
 
@@ -18,6 +19,7 @@ body {
     max-width: 1500px;
     display: flex;
     align-items: center;
+    margin: 0 auto;
     font-size: 18px;
     font-family: Poppins;
 }
@@ -57,6 +59,8 @@ section {
     padding: 0;
     display: flex;
     text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .linki a {
@@ -70,12 +74,18 @@ section {
     font-style: italic;
 }
 .link:hover {
-    background: rgba(0,0,0,0.6);
+    background: rgba(100,0,0,0.3);
 }
 
 .link img {
     max-width: 100px;
     padding: 10px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.link:hover img {
+    transform: scale(1.2);
 }
 
 img {
@@ -97,10 +107,15 @@ ul.opis {
     }
     .zdjecie {
         order: 1;
+        width: 50%;
     }
 }
 
 @media all and (max-width: 500px) {
+    .wizytowka {
+        font-size: 16px;
+    }
+
     .linki ul {
         flex-wrap: wrap;
     }
