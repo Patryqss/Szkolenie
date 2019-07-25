@@ -36,7 +36,7 @@
                     minuta = dzisiaj.getMinutes()-minuta;
                 }
                 if (dzisiaj.getHours()<godzina) {
-                    godzina = 60+(dzisiaj.getHours()-godzina);
+                    godzina = 24+(dzisiaj.getHours()-godzina);
                     dzien++;
                 } else {
                     godzina = dzisiaj.getHours()-godzina;
