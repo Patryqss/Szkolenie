@@ -6,72 +6,13 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
         <link href="style.css" rel="stylesheet" type="text/css" >
-        <meta name="description" content="Wizytówka Patryka Grzyba">
+        <meta name="description" content="Wizytówka - Patryk Grzyb">
 	    <meta name="keywords" content="Wizytówka, Patryk Grzyb, Najlepszy programista, CodersCamp">
         <meta name="author" content="PG">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-Ua-Compatible" content="IE=edge">
         
-        <script type="text/javascript">
-            function mojWiek()
-            {
-                var dzisiaj = new Date();
-                var sekunda = 7;
-                var minuta = 30;
-                var godzina = 15;
-                var dzien = 14;
-                var miesiac = 7;
-                var rok = 1997;
-
-                if (dzisiaj.getSeconds()<sekunda) {
-                    sekunda = 60+(dzisiaj.getSeconds()-sekunda);
-                    minuta++;
-                } else {
-                    sekunda = dzisiaj.getSeconds()-sekunda;
-                }
-                if (dzisiaj.getMinutes()<minuta) {
-                    minuta = 60+(dzisiaj.getMinutes()-minuta);
-                    godzina++;
-                } else {
-                    minuta = dzisiaj.getMinutes()-minuta;
-                }
-                if (dzisiaj.getHours()<godzina) {
-                    godzina = 24+(dzisiaj.getHours()-godzina);
-                    dzien++;
-                } else {
-                    godzina = dzisiaj.getHours()-godzina;
-                }
-                if (dzisiaj.getDate()<dzien) {
-                    if (dzisiaj.getMonth()+1==1 || dzisiaj.getMonth()+1==3 || dzisiaj.getMonth()+1==5 || dzisiaj.getMonth()+1==7 || dzisiaj.getMonth()+1==8 || dzisiaj.getMonth()+1==10 || dzisiaj.getMonth()+1==12) {
-                        dzien = 31+(dzisiaj.getDate()-dzien);
-                        miesiac++;
-                    } else if (dzisiaj.getMonth()+1==4 || dzisiaj.getMonth()+1==6 || dzisiaj.getMonth()+1==9 || dzisiaj.getMonth()+1==11) {
-                        dzien = 30+(dzisiaj.getDate()-dzien);
-                        miesiac++;
-                    } else {
-                        dzien = 28+(dzisiaj.getDate()-dzien);
-                        miesiac++;
-                    }
-                } else {
-                    dzien = dzisiaj.getDate()-dzien;
-                }
-                if (dzisiaj.getMonth()+1<miesiac) {
-                    miesiac = 12+(dzisiaj.getMonth()+1-miesiac);
-                    rok++;
-                } else {
-                    miesiac = dzisiaj.getMonth()+1-miesiac;
-                }
-                rok = dzisiaj.getFullYear()-rok;
-
-                if (godzina<10) godzina = "0"+godzina;
-                if (minuta<10) minuta = "0"+minuta;
-                if (sekunda<10) sekunda = "0"+sekunda;
-        
-                document.getElementById("zegar").innerHTML = " "+rok+" lat "+miesiac+" miesięcy "+dzien+" dni | "+godzina+":"+minuta+":"+sekunda;
-        
-                setTimeout("mojWiek()",1000);
-            }
-        </script>
+        <script type="text/javascript" src="wiek.js"></script>
     </head>
     <body onload="mojWiek();">
             
@@ -81,11 +22,11 @@
 
         <div class="wizytowka">
             <section class="zdjecie">
-                <img src=zdjecie.jpg>
+                <img src=img/zdjecie.jpg>
             </section>
             <section class="szczegoly" >
                 <p class="opis"><span class="wstep">Wykształcenie:</span> Technik Teleinformatyk</p>
-                <p class="opis"><span class="wstep">Obecne zajęcie:</span> Trzeci rok na Uniwersytecie Ekonomicznym na kierunku "Informatyka w biznesie"</p>
+                <p class="opis"><span class="wstep">Obecne zajęcie:</span> Trzeci rok na Uniwersytecie Ekonomicznym na kierunku "Informatyka w biznesie", Opiekun klienta w <em>ksiegowy-24.pl</em></p>
                 <p class="opis"><span class="wstep">Dokładny wiek:</span><span id="zegar"></span></p>
                 <p class="opis"><span class="wstep">Umiejętności:</span></p>
                 <ul class="opis">
@@ -107,12 +48,12 @@
         <section class="linki">
             <p>Sprawdź moje prace lub znajdź mnie w mediach społecznościowych klikając na jeden z poniższych linków:</p>
                 <ul>
-                    <a href="fragment.html" target="_blank"><li class="link ksiazka"><img src="Książka.png"></li></a>
-                    <a href="https://forum.gmclan.org/index.php?/topic/34262-12-prac-herkulesa/" target="_blank"><li class="link gra"><img src="Gra.png"></li></a>
-                    <a href="https://www.youtube.com/watch?v=klV9VyHZJgw" target="_blank"><li class="link film"><img src="Kryształ.png"></li></a>
-                    <a href="https://www.facebook.com/patryk.grzyb.94" target="_blank"><li class="link facebook"><img src="Fb.png"></li></a>
-                    <a href="https://www.instagram.com/patryqss/" target="_blank"><li class="link instagram"><img src="Inst.png"></li></a>
-                    <a href="https://github.com/Patryqss" target="_blank"><li class="link github"><img src="Git.png"></li></a>
+                    <a href="fragment.html" target="_self"><li class="link ksiazka"><img src="img/Książka.png"></li></a>
+                    <a href="https://forum.gmclan.org/index.php?/topic/34262-12-prac-herkulesa/" target="_blank"><li class="link gra"><img src="img/Gra.png"></li></a>
+                    <a href="https://www.youtube.com/watch?v=klV9VyHZJgw" target="_blank"><li class="link film"><img src="img/Kryształ.png"></li></a>
+                    <a href="https://www.facebook.com/patryk.grzyb.94" target="_blank"><li class="link facebook"><img src="img/Fb.png"></li></a>
+                    <a href="https://www.instagram.com/patryqss/" target="_blank"><li class="link instagram"><img src="img/Inst.png"></li></a>
+                    <a href="https://github.com/Patryqss" target="_blank"><li class="link github"><img src="img/Git.png"></li></a>
                 </ul>
         </section>
     </body>
